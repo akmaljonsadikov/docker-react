@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - sudo docker build -t akmaljonsadikov/docker-react -f Dockerfile.dev .  
+  - docker build -t akmaljonsadikov/docker-react -f Dockerfile.dev .  
 
 script:
-  - sudo docker run -e CI=true bf73f3ae3731 npm run test 
+  - docker run -e CI=true bf73f3ae3731 npm run test 
