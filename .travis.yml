@@ -1,4 +1,4 @@
-language: generic
+language: node.js
 os: osx
 sudo: required 
 services:
