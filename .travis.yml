@@ -1,11 +1,12 @@
-language: ruby
-os: osx
+language: generic
+#os: osx
 sudo: required 
+
 services:
   - docker
 
 before_install:
-  - docker build -t akmaljonsadikov/docker-react -f Dockerfile.dev .  
+  - docker build -e CI=true -t akmaljonsadikov/docker-react -f Dockerfile.dev .  
 
 script:
   - docker run -e CI=true akmaljonsadikov/docker-react npm run test 
